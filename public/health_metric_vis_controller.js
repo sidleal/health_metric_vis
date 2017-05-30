@@ -14,6 +14,12 @@ module.controller('KbnHealthMetricVisController', function ($scope, Private) {
   }
   
   function getColor(val, visParams) {
+    
+    if (visParams.timeContent) {
+       var cdate = new Date(); 
+       val = (cdate - val) / 1000; // diff in seconds
+    }
+    
     if (!visParams.invertScale) {
       if (val <= visParams.redThreshold) {
         return visParams.redColor;
