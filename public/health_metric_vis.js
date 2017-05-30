@@ -26,6 +26,7 @@ function HealthMetricVisProvider(Private) {
         handleNoResults: true,
         fontSize: 60,
         invertScale: false,
+        timeContent: false,
         redThreshold: 0,
         greenThreshold: 0,
         redColor: "#fd482f",
